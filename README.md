@@ -1,2 +1,2 @@
-# CattleTagger
-The MIMAR cattle tag encoder
+# Twitch Particle Physics
+Example website for an interactive stream

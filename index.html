@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tag Encoding</title>
+    <title>Detector choice 1</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -18,59 +18,18 @@
     </style>
 </head>
 <body>
-	<h1>Encoder</h1>
-    <div class="input-group">
-        <label for="calf_id">Calf ID (0-255):</label>
-        <input type="number" id="calf_id" placeholder="10">
-        <mark id="msg_cid"></mark>
-    </div>
-    <div class="input-group">
-        <label for="calf_yr">Calf Birth Year Letter(A-Z):</label>
-        <input type="text" id="calf_yr" placeholder="M">
-        <mark id="msg_cyr"></mark>
-    </div>
-    <div class="input-group">
-        <label for="calf_twin">Twins(0-3):</label>
-        <input type="number" id="calf_twin" placeholder="0">
-        <mark id="msg_ctw"></mark>
-    </div>
+    <h1>Choose an option:</h1>
+    <button onclick="optionSelected(1)">Option 1</button>
+    <button onclick="optionSelected(2)">Option 2</button>
+    <button onclick="optionSelected(3)">Option 3</button>
 
-    <div class="input-group">
-        <label for="cow_id">Cow ID(0-255)::</label>
-        <input type="number" id="cow_id" placeholder="10">
-        <mark id="msg_oid"></mark>
-    <div class="input-group">
-    </div>
-        <label for="cow_yr">Cow Birth Year Letter(A-Z):</label>
-        <input type="text" id="cow_yr" placeholder="M">
-        <mark id="msg_oyr"></mark>
-    <div class="input-group">
-    </div>
-        <label for="cow_twin">Twins (0-3):</label>
-        <input type="number" id="cow_twin" placeholder="0">
-        <mark id="msg_otw"></mark>
-    </div>
-
-    <div class="display-equation">
-        <button bencode>Encode Tag</button>
-    </div>
-    <div class="display-output">
-        <p id="encoded_values"></p>
-    </div>
-	<h1>Decoder</h1>
-    <div class="input-group">
-        <label for="tag_code">Encoded Tag:</label>
-        <input type="text" id="tag_code" placeholder="######">
-        <mark id="msg_tag"></mark>
-    </div>
-    <div class="display-equation">
-        <button bdecode>Decode Tag</button>
-    </div>
-    <div class="display-output">
-        <p id="decoded_values"></p>
-    </div>
-
-    <script src="scripts.js"></script>
+    <script>
+        function optionSelected(option) {
+            localStorage.setItem('option', option);
+            window.location.href = 'page2.html';
+        }
+    </script>
 </body>
+
 </html>
 

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page 2</title>
+</head>
+<body>
+    <h1>Choose another option:</h1>
+    <button onclick="optionSelected(4)">Option 4</button>
+    <button onclick="optionSelected(5)">Option 5</button>
+    <button onclick="optionSelected(6)">Option 6</button>
+
+    <script>
+        function optionSelected(option) {
+            localStorage.setItem('option2', option);
+            window.location.href = 'page3.html';
+        }
+    </script>
+</body>
+</html>
+
