@@ -10,6 +10,9 @@
     <p>Option chosen in page 1: <span id="option1"></span></p>
     <p>Option chosen in page 2: <span id="option2"></span></p>
 
+    <!-- Add a clickable GIF -->
+    <img id="gifImage" src="example.gif" alt="GIF" onclick="playOnce()" style="cursor: pointer;">
+
     <script>
         // Retrieve options from localStorage
         const option1 = localStorage.getItem('option');
@@ -18,7 +21,13 @@
         // Display options on the page
         document.getElementById('option1').textContent = option1;
         document.getElementById('option2').textContent = option2;
+
+        // Function to play the GIF once
+        function playOnce() {
+            const gif = document.getElementById('gifImage');
+            gif.src = gif.src; // Resetting the src triggers the animation
+            gif.onclick = null; // Remove onclick to prevent further clicks
+        }
     </script>
 </body>
 </html>
-
