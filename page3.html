@@ -11,7 +11,10 @@
     <p>Option chosen in page 2: <span id="option2"></span></p>
 
     <!-- Add a clickable GIF -->
-    <img id="gifImage" src="example.gif" alt="GIF" onclick="playOnce()" style="cursor: pointer;">
+	<video id="video" onclick="playOnce()" controls style="cursor: pointer;">
+        <source src="vid.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
 
     <script>
         // Retrieve options from localStorage
@@ -23,10 +26,10 @@
         document.getElementById('option2').textContent = option2;
 
         // Function to play the GIF once
-        function playOnce() {
-            const gif = document.getElementById('gifImage');
-            gif.src = gif.src; // Resetting the src triggers the animation
-            gif.onclick = null; // Remove onclick to prevent further clicks
+		function playOnce() {
+            const video = document.getElementById('video');
+            video.play();
+            video.onclick = null; // Remove onclick to prevent further clicks
         }
     </script>
 </body>
